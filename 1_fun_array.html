@@ -1,0 +1,68 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    
+    // a. Написать функцию, которая принимает в качестве параметра число n. Результатом работы функции является массив из N элементов со значениями 1, 2, 3… n.
+    function array123(n) {
+        var array = [];
+        for (var i = 1; i <=n; i++) {
+            array.push(i);
+        }
+        return array;
+    }
+
+    // b. Написать функцию, которая принимает массив чисел. Результатом работы функции является сумма чисел этого массива.
+    function sumArray(array) {
+        var sum = 0;
+        for (var i = 0; i < array.length; i++) {
+            sum += array[i]
+        }
+        return sum;
+    }
+
+    // c. Написать функцию, которая на вход получает массив целых чисел, и в качестве результата возвращает максимальное число.
+    function maxFromArray(array) {
+        var max = array[0];
+        for (var i = 1; i < array.length; i++) {
+            if (array[i] > max)
+                max = array[i];
+        }
+        return max;
+    }
+
+    // d. Написать функцию, которая на вход получает массив целых чисел, и в качестве результата возвращает минимальное число.
+    function minFromArray(array) {
+        var min = array[0];
+        for (var i = 1; i < array.length; i++) {
+            if (array[i] < min)
+                min = array[i];
+        }
+        return min;
+    }
+
+    // f. Написать функцию, которая на вход получает массив целых чисел, и в качестве результата возвращает только четные числа из этого массива. 
+    function evenFromArray(array) {
+        // var cnt = 0; это если количество четных
+        var evenArray = [];
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {                
+                // cnt++;
+                evenArray.push(array[i]);
+            }
+        }
+        return evenArray;
+    }
+
+    document.write('Функция a ( массив из N элементов со значениями 1, 2, 3… n): ' + array123(+prompt('Введите число N для функции a')) + '<br><br>');
+
+    var testArray = [7, 5, 9, -3, 1, 10, 20];
+
+    document.write('Функция b (сумма чисел тестового массива) ' + testArray + ' результат: ' + sumArray(testArray) + '<br><br>');
+
+    document.write('Функция c (возвращает максимальное число из тестового массива) ' + testArray + ' результат: ' + maxFromArray(testArray) + '<br><br>');
+
+    document.write('Функция d (возвращает минимальное число из тестового массива) ' + testArray + ' результат: ' + minFromArray(testArray) + '<br><br>');
+
+    document.write('Функция f (возвращает только четные числа из тестового массива) ' + testArray + ' результат: ' + evenFromArray(testArray) + '<br><br>');
+
+
+</script>
